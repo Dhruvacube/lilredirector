@@ -60,7 +60,7 @@ export default async (event: FetchEvent, redirects: Array<Redirect>, options = {
   try {
     switch (url.pathname) {
       case `${baseUrl}`:
-        response = renderHtml(template({ baseUrl, redirects, config.htmlExtras }))
+        response = renderHtml(template({ baseUrl, redirects, config.htmlExtras, }))
         break
       default:
         if (config.removeTrailingSlashes) removeTrailingSlashesFromUrl(url)
