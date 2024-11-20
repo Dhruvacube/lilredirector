@@ -5,7 +5,8 @@ export default ({
   redirects,
 }: {
   baseUrl: string
-  redirects: Redirect[]
+  redirects: Redirect[],
+  htmlExtras: string[]
 }) => () => `
 <!doctype html>
 <html>
@@ -28,6 +29,10 @@ export default ({
       </div>
       <span><code>v1.0.1</code></span>
     </ul>
+
+    ${htmlExtras.map((a: string) => `<div class="d-flex flex-row mb-3">
+      <div class="p-2">${a}</div>
+    </div>`,).join(`\n`)}
 
     <div class="py-6">
       <header class="mb-8">
