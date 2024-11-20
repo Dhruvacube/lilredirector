@@ -20,6 +20,7 @@ const defaults = {
   },
   baseUrl: '/_redirects',
   removeTrailingSlashes: true,
+  htmlExtras: [],
 }
 
 export default async (event: FetchEvent, redirects: Array<Redirect>, options = {}) => {
@@ -59,7 +60,7 @@ export default async (event: FetchEvent, redirects: Array<Redirect>, options = {
   try {
     switch (url.pathname) {
       case `${baseUrl}`:
-        response = renderHtml(template({ baseUrl, redirects }))
+        response = renderHtml(template({ baseUrl, redirects, config.htmlExtras }))
         break
       default:
         if (config.removeTrailingSlashes) removeTrailingSlashesFromUrl(url)
