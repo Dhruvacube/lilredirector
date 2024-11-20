@@ -26,7 +26,7 @@ const defaults = {
 export default async (event: FetchEvent, redirects: Array<Redirect>, options = {}) => {
   const { request } = event
   const config = Object.assign(defaults, options)
-  const { basicAuthentication, baseUrl } = config
+  const { basicAuthentication, baseUrl, removeTrailingSlashes, htmlExtras } = config
   let error, response
   let url = new URL(event.request.url)
 
@@ -60,7 +60,7 @@ export default async (event: FetchEvent, redirects: Array<Redirect>, options = {
   try {
     switch (url.pathname) {
       case `${baseUrl}`:
-        response = renderHtml(template({ baseUrl, redirects, config.htmlExtras }))
+        response = renderHtml(template({ baseUrl, redirects, htmlExtras }))
         break
       default:
         if (config.removeTrailingSlashes) removeTrailingSlashesFromUrl(url)
