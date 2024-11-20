@@ -3,6 +3,7 @@ import type { Redirect } from './types'
 export default ({
   baseUrl,
   redirects,
+  htmlExtras,
 }: {
   baseUrl: string
   redirects: Redirect[],
