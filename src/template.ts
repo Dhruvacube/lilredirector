@@ -11,7 +11,7 @@ export default ({
 <html>
   <head>
     <title>Lil Redirector</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/signalnerve/lilredirector/master/.github/logo.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/signalnerve/lilredirector/master/.github/logo.png">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <style>
       .bg-gray-50 {
