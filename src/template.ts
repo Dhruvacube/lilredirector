@@ -30,7 +30,6 @@ export default ({
       </div>
       <span><code>v1.0.1</code></span>
     </ul>
-      <div class="d-flex flex-row mb-3"> ${htmlExtras.map((a: string) => `<div class="p-2">${a}</div>`,).join(`\n`)}</div>
 
     <div class="py-6">
       <header class="mb-8">
