@@ -31,7 +31,7 @@ export default ({
       <span><code>v1.0.1</code></span>
     </ul>
 
-          ${htmlExtras.length ? `<div class="d-flex flex-row mb-3"> ${htmlExtras.map((a: string) => `<div class="p-2">${a}</div>`,).join(`\n`)}</div>` : ``}
+          ${htmlExtras.length ? `<div class="flex"> ${htmlExtras.map((a: string) => `<div class="flex-auto p-2 w-80">${a}</div>`,).join(`\n`)}</div>` : ``}
 
     <div class="py-6">
       <header class="mb-8">
